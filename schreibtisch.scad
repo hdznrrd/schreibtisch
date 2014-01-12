@@ -54,7 +54,7 @@ module routed_side() {
 module box_walls() {
 	routed_side();
 	mirror([1,0,0]) routed_side();
-	translate([-base_width/2,base_depth-(thinkness_box-router_depth),0]) translate([0,-width_box_element/2,0]) rotate([0,0,-90]) routed_side();
+	translate([-base_width/2,base_depth+thinkness_box-router_depth,0]) translate([0,-width_box_element/2,0]) rotate([0,0,-90]) routed_side();
 }
 
 module box_trays() {
@@ -108,7 +108,7 @@ module 2d_tray_top() {
 }
 
 module 2d_wall() {
-	translate([0,-width_box_element,0])
+	translate([0,-width_box_element-50,0])
 	rotate([0,0,90])
 	projection(cut=true)
 	translate([-width_box_element/2,0,top_width/2+offset_edge-router_depth-base_width]) rotate([0,-90,-90])
