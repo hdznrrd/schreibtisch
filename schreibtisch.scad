@@ -15,7 +15,7 @@ base_depth = 500;
 top_width = 1600;
 top_depth = base_depth+2*offset_edge;
 
-width_box_element = 300;
+width_box_element = base_width;//300;
 height_box_element = 330;
 
 
@@ -126,5 +126,5 @@ module draw_3d() {
 	% chair();
 }
 
-draw_2d();
-//draw_3d();
+//draw_2d();
+draw_3d();
